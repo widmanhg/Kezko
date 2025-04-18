@@ -63,3 +63,24 @@ ORDER BY date;
 
 
 #  Python  (Part 2)
+
+## Overview
+analyzing email delivery failure messages to identify non-existent email addresses. It processes a CSV file containing email delivery data and separates addresses that failed due to non-existence from those that failed for other reasons.
+
+
+## Main idea of how to do it
+The script uses pattern matching to identify specific SMTP error codes and messages that indicate non-existent email addresses. It categorizes these failures into:
+
+- **Definitive non-existent indicators**:
+  - "does not exist" messages
+  - SMTP error code 5.1.1
+  - "user unknown" notifications
+  - "no such host" errors
+  - Other clear indicators of invalid addresses
+
+- **Suspicious indicators** (might suggest non-existence):
+  - SMTP error code 550 5.0.1
+  - "sender verify failed" messages
+
+## Output
+The script generates a CSV file containing the list of identified non-existent email addresses.
