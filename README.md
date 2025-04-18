@@ -1,6 +1,6 @@
 #  SQL  (Part 1)
 
-## Step 1: Create the `web_analytics` Table and just fill it with values , i used a cophy of the photo i was goiven
+## Step 1: Create the `web_analytics` Table and just fill it with values , i used a copy of the photo and then a bunch of random data of the photo i was given
 
 The table `web_analytics` stores daily website metrics including page views, conversions, and revenue.
 
